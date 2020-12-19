@@ -30,9 +30,4 @@ public class RotateAroundPlayer : StateMachineBehaviour
     {
         return Quaternion.Euler(0f, 0f, orbitRotateSpeed) * (point - pivot) + pivot;
     }
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        
-    }
 }
