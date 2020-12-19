@@ -16,12 +16,12 @@ public class RotateAroundPlayer : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Transform transform = animator.transform;
-        Vector3 anglePoint = LerpByDistance(player.position, transform.position, orbitDistance);
-        Vector3 targetPos = RotatePointAroundPivot(anglePoint, player.position);
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        Vector3 angle = LerpByDistance(player.position, transform.position, orbitDistance);
+        Vector3 target = RotatePointAroundPivot(angle, player.position);
+        transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
     }
 
-    private Vector3 LerpByDistance(Vector3 from, Vector3 to, float dist)
+    private static Vector3 LerpByDistance(Vector3 from, Vector3 to, float dist)
     {
         return dist * (to - from).normalized + from;
     }
