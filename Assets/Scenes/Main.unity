@@ -272,8 +272,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 548184591
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1730901723975914595, guid: b707ca0ae50f9e843a191bca53adeb01,
     type: 3}
@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 1675095774}
   - component: {fileID: 1675095773}
   - component: {fileID: 1675095775}
+  - component: {fileID: 1675095778}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -468,6 +469,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1675095778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675095772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5c39842ffbe3e45ab6d1675b20b6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireCooldown: 1
+  laserPrefab: {fileID: 6016259758581611024, guid: c41d9cc00e820054fafddf678208322c,
+    type: 3}
 --- !u!1001 &3932590589199301792
 PrefabInstance:
   m_ObjectHideFlags: 0
