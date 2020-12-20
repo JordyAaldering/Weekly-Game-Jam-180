@@ -13,6 +13,10 @@ public class LookTowardsPlayer : MonoBehaviour
 
 	void Update()
     {
+        if (!player) {
+            return;
+        }
+
         Vector3 lookPos = player.position - transform.position;
         float angle = Mathf.Atan2(lookPos.y, lookPos.x) * Mathf.Rad2Deg;
         Quaternion rot = Quaternion.AngleAxis(angle, Vector3.forward);

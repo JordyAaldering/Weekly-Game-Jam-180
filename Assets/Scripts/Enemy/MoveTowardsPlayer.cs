@@ -21,6 +21,10 @@ public class MoveTowardsPlayer : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!player) {
+            return;
+        }
+
         Transform transform = animator.transform;
         Vector3 target = LerpByDistance(player.position, transform.position, stoppingDistance);
         transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);

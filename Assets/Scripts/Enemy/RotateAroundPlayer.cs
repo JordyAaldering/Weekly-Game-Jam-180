@@ -22,6 +22,10 @@ public class RotateAroundPlayer : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!player) {
+            return;
+		}
+
         Transform transform = animator.transform;
         Vector3 angle = LerpByDistance(player.position, transform.position, orbitDistance);
         Vector3 target = RotatePointAroundPivot(angle, player.position);
