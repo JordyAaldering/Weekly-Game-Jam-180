@@ -11,8 +11,6 @@ public class ScoreManager : MonoBehaviour
     public float Score { get; private set; }
 	public float PointsPerSecond { get; private set; }
 
-	private PlayerCombat player;
-
 	private void Awake()
 	{
 		Instance = this;

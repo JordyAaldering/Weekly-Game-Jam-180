@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7295523156489786978}
   - component: {fileID: 3932590590510419180}
   - component: {fileID: 2690571939875316935}
+  - component: {fileID: 7349932130807102470}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -120,6 +121,24 @@ MonoBehaviour:
   fireCooldown: 5
   laserPrefab: {fileID: 6016259758581611024, guid: c41d9cc00e820054fafddf678208322c,
     type: 3}
+--- !u!114 &7349932130807102470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3932590590510419176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5ba977891f10a4d876b02d7460dcc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -8535788189756399308, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  - {fileID: -4522803996747795011, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  - {fileID: 1021604507497806049, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  - {fileID: -1655781334524724447, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  - {fileID: 5645763318122690536, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
 --- !u!1 &3932590590745043491
 GameObject:
   m_ObjectHideFlags: 0
