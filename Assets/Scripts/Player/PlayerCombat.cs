@@ -6,6 +6,8 @@ public class PlayerCombat : MonoBehaviour
 	[SerializeField] private float fireCooldown;
 	[SerializeField] private Laser laserPrefab;
 
+	public static bool IsDead { get; private set; }
+
 	private float fireCooldownLeft;
 
 	private PlayerMovement pm;
@@ -35,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
 			return;
 		}
 
+		IsDead = true;
 		Destroy(gameObject);
 	}
 

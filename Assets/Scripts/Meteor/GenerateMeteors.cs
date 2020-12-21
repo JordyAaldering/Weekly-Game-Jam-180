@@ -12,6 +12,7 @@ public class GenerateMeteors : MonoBehaviour
 			BezierFollow meteor = Instantiate(meteorPrefab, transform);
 			meteor.name = $"Meteor ({i + 1})";
 			meteor.routes = routes;
+			meteor.GetComponent<SpriteRenderer>().sortingOrder = i;
 			StartCoroutine(meteor.FollowRoute());
 		}
 	}
