@@ -119,8 +119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireCooldown: 5
+  fireDistance: 5
   laserPrefab: {fileID: 6016259758581611024, guid: c41d9cc00e820054fafddf678208322c,
     type: 3}
+  pointsReward: 100
 --- !u!114 &7349932130807102470
 MonoBehaviour:
   m_ObjectHideFlags: 0

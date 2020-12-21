@@ -8,8 +8,8 @@ public class ScoreManager : MonoBehaviour
 
     public static ScoreManager Instance { get; private set; }
 
-    public float Score { get; private set; }
-	public float PointsPerSecond { get; private set; }
+    public float Score { get; set; }
+	public float PointsPerSecond { get; set; }
 
 	private void Awake()
 	{
