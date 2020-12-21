@@ -19,6 +19,8 @@ public class Laser : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+		Debug.Log("col");
+
 		if (collision.gameObject != Parent) {
 			if (collision.TryGetComponent<PlayerCombat>(out var pCombat)) {
 				pCombat.Die();

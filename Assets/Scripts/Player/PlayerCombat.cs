@@ -29,12 +29,19 @@ public class PlayerCombat : MonoBehaviour
 		}
 	}
 
-	public void Die()
+	public void Die(bool force = false)
 	{
-		if (pm.IsDashing) {
+		if (!force && pm.IsDashing) {
 			return;
 		}
 
 		Destroy(gameObject);
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Meteor")) {
+			Die(true);
+		}
 	}
 }
