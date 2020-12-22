@@ -22,6 +22,10 @@ public class EnemyCombat : MonoBehaviour
 		var wait = new WaitForSeconds(1f);
 
 		while (true) {
+			if (PlayerCombat.IsDead) {
+				break;
+			}
+
 			if (Vector2.Distance(transform.position, player.position) < fireDistance) {
 				Laser laser = Instantiate(laserPrefab, transform.position, transform.rotation);
 				laser.Parent = gameObject;

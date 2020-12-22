@@ -8,15 +8,16 @@ public class EnemySpawning : MonoBehaviour
 
 	[SerializeField] private EnemyCombat enemyPrefab;
 
-	private float spawnTimeLeft;
-
-	private void Awake()
-	{
-		spawnTimeLeft = 3f;
-	}
+	private float spawnTimeLeft = 1f;
 
 	private void Update()
 	{
+		if (PlayerCombat.IsDead) {
+			return;
+		}
+
+		spawnTimeLeft -= Time.deltaTime;
+
 		if (spawnTimeLeft <= 0f) {
 			spawnTimeLeft = Random.Range(spawnTimeMin, spawnTimeMax);
 
@@ -25,8 +26,6 @@ public class EnemySpawning : MonoBehaviour
 			Vector3 pos = new Vector3(x - spawnDistance, y * spawnDistance);
 
 			Instantiate(enemyPrefab, pos, Quaternion.identity, transform);
-		} else {
-			spawnTimeLeft -= Time.deltaTime;
 		}
 	}
 }
