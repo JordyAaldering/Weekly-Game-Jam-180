@@ -195,7 +195,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8248682901034220958}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8248682901034220956}
+        m_MethodName: GetUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8248682901034220959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5def081947b19bf4688d9d1d2037e0ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 8248682900788675186}
+  description: {fileID: 8248682901416945296}
+  upgrade: {fileID: 0}
 --- !u!1 &8248682901416945298
 GameObject:
   m_ObjectHideFlags: 0

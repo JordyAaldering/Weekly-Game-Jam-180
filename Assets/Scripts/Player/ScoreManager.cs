@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
 
     public float Score { get; set; }
-	public float PointsPerSecond { get; set; }
+	public float ScorePerSecond { get; set; }
 
 	private bool isPaused;
 
@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
 	{
 		Instance = this;
 
-		PointsPerSecond = initialPointsPerSecond;
+		ScorePerSecond = initialPointsPerSecond;
 	}
 
 	public static void DisablePanel()
@@ -33,7 +33,7 @@ public class ScoreManager : MonoBehaviour
 			return;
 		}
 
-		Score += PointsPerSecond * Time.deltaTime;
+		Score += ScorePerSecond * Time.deltaTime;
 		scoreText.text = Mathf.FloorToInt(Score).ToString();
 	}
 }

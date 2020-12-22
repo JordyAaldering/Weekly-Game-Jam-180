@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private GameObject shieldSprite;
 	[SerializeField] private Color shipDashColor;
 
+	public static bool CanDash { get; set; } = true;
 	public static bool IsDashing { get; private set; }
 
 	private Vector2 moveDir;
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 		// clamp diagonal movement speed
 		moveDir = Vector2.ClampMagnitude(moveDir, 1f);
 
-		if (!IsDashing && Input.GetButtonDown("Dash")) {
+		if (CanDash && !IsDashing && Input.GetButtonDown("Dash")) {
 			StartCoroutine(Dash(moveDir));
 		}
 	}

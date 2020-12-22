@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradePanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Image icon;
+    [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private UpgradeBase upgrade;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Awake()
+	{
+		icon.sprite = upgrade.Icon;
+		description.text = upgrade.Description;
+	}
+
+	public void GetUpgrade()
+	{
+		upgrade.ApplyUpgrade();
+	}
 }
