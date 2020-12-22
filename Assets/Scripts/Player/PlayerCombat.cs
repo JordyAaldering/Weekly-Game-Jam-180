@@ -31,13 +31,14 @@ public class PlayerCombat : MonoBehaviour
 		}
 
 		IsDead = true;
+
+		FindObjectOfType<GameOverCanvas>().EnablePanel();
 		Destroy(gameObject);
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.CompareTag("Meteor")) {
-			Debug.Log(collision.gameObject.name);
 			Die(true);
 		}
 	}
