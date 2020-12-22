@@ -8,5 +8,11 @@ public abstract class UpgradeBase : ScriptableObject
     public Sprite Icon => icon;
     public string Description => description;
 
-    public abstract void ApplyUpgrade();
+    public void GetUpgrade()
+	{
+        ApplyUpgrade();
+        FindObjectOfType<UpgradeManager>().CloseUpgradePanel();
+	}
+
+    protected abstract void ApplyUpgrade();
 }

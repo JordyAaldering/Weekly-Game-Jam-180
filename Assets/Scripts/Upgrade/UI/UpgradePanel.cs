@@ -18,6 +18,6 @@ public class UpgradePanel : MonoBehaviour
 
 	public void GetUpgrade()
 	{
-		upgrade.ApplyUpgrade();
+		upgrade.GetUpgrade();
 	}
 }

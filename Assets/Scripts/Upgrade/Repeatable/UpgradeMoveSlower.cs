@@ -6,7 +6,7 @@ public class UpgradeMoveSlower : UpgradeBase
 	[SerializeField] private float moveSpeedModifier;
 	[SerializeField] private float scoreIncrease;
 
-	public override void ApplyUpgrade()
+	protected override void ApplyUpgrade()
 	{
 		PlayerMovement.MoveSpeedModifier = moveSpeedModifier;
 		ScoreManager.Instance.Score += scoreIncrease;

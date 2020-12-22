@@ -5,7 +5,7 @@ public class UpgradeNoShoot : UpgradeBase
 {
 	[SerializeField] private float scorePerSecImprovement;
 
-	public override void ApplyUpgrade()
+	protected override void ApplyUpgrade()
 	{
 		PlayerCombat.CanShoot = false;
 		ScoreManager.Instance.ScorePerSecond += scorePerSecImprovement;

@@ -5,7 +5,7 @@ public class UpgradeAlwaysDash : UpgradeBase
 {
 	[SerializeField] private float scorePerSecImprovement;
 
-	public override void ApplyUpgrade()
+	protected override void ApplyUpgrade()
 	{
 		PlayerMovement.AlwaysDash = true;
 		ScoreManager.Instance.ScorePerSecond += scorePerSecImprovement;

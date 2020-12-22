@@ -5,7 +5,7 @@ public class UpgradeNoDash : UpgradeBase
 {
 	[SerializeField] private float scorePerSecImprovement;
 
-	public override void ApplyUpgrade()
+	protected override void ApplyUpgrade()
 	{
 		PlayerMovement.CanDash = false;
 		ScoreManager.Instance.ScorePerSecond += scorePerSecImprovement;

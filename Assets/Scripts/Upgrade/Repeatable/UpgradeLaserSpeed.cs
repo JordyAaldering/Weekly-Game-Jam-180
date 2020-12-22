@@ -7,7 +7,7 @@ public class UpgradeLaserSpeed : UpgradeBase
 	[SerializeField] private float laserSpeedModifier;
 	[SerializeField] private float scoreIncrease;
 
-	public override void ApplyUpgrade()
+	protected override void ApplyUpgrade()
 	{
 		if (isPlayerSpeed) {
 			Laser.PlayerSpeedModifier *= laserSpeedModifier;

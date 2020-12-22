@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+	[SerializeField] private float upgradeInterval;
 	[SerializeField] private List<UpgradeBase> uniqueUpgrades;
     [SerializeField] private List<UpgradeBase> repeatableUpgrades;
 
@@ -11,15 +12,33 @@ public class UpgradeManager : MonoBehaviour
 	[SerializeField] private GameObject upgradeGroup;
     [SerializeField] private UpgradePanel[] upgradePanels;
 
+	private float timeUntilUpgrade = 5f;
+
 	private void Awake()
 	{
 		upgradeGroup.SetActive(false);
 	}
 
-	public void ShowUpgrades()
+	private void Update()
 	{
-		upgradeGroup.SetActive(true);
+		timeUntilUpgrade -= Time.deltaTime;
 
+		if (timeUntilUpgrade <= 0f) {
+			timeUntilUpgrade = upgradeInterval;
+			upgradeGroup.SetActive(true);
+			SetUpgrades();
+			Time.timeScale = 0f;
+		}
+	}
+
+	public void CloseUpgradePanel()
+	{
+		Time.timeScale = 1f;
+		upgradeGroup.SetActive(false);
+	}
+
+	private void SetUpgrades()
+	{
 		if (uniqueUpgrades.Count > 0) {
 			// always give one unique upgrade
 			SetUniqueUpgrade();
