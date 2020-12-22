@@ -2464,7 +2464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireCooldown: 1
-  laserPrefab: {fileID: 6016259758581611024, guid: c41d9cc00e820054fafddf678208322c,
+  laserPrefab: {fileID: 6016259758581611024, guid: 5722cca14d75e534a971f45eea9a9d8b,
     type: 3}
 --- !u!224 &1709765839 stripped
 RectTransform:
