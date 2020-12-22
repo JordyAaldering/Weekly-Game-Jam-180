@@ -3,18 +3,29 @@
 public class RotateAroundPlayer : StateMachineBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float orbitDistance;
-    [SerializeField] private float orbitRotateSpeed;
+    [SerializeField] private float orbitDistanceMin;
+    [SerializeField] private float orbitDistanceMax;
+    [SerializeField] private float orbitRotateSpeedMin;
+    [SerializeField] private float orbitRotateSpeedMax;
 
     [Header("State Transition")]
     [SerializeField] private float minStateTime;
     [SerializeField] private float maxStateTime;
+
+    private float orbitDistance;
+    private float orbitRotateSpeed;
     private float stateTimeLeft;
 
     private Transform player;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        orbitDistance = Random.Range(orbitDistanceMin, orbitDistanceMax);
+        orbitRotateSpeed = Random.Range(orbitDistanceMin, orbitDistanceMax);
+        if (Random.Range(0f, 1f) > 0.5f) {
+            orbitRotateSpeed = -orbitRotateSpeed;
+        }
+
         stateTimeLeft = Random.Range(minStateTime, maxStateTime);
 
         player = GameObject.FindWithTag("Player").transform;
@@ -33,7 +44,11 @@ public class RotateAroundPlayer : StateMachineBehaviour
 
         stateTimeLeft -= Time.deltaTime;
         if (stateTimeLeft <= 0f) {
-            animator.Play("MoveTowardsPlayer");
+            if (Random.Range(0f, 1f) > 0.2f) {
+                animator.Play("MoveTowardsPlayer");
+			} else {
+                animator.Play("Idle");
+			}
 		}
     }
 

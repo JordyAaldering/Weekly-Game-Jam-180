@@ -10,13 +10,6 @@ public class PlayerCombat : MonoBehaviour
 
 	private float fireCooldownLeft;
 
-	private PlayerMovement pm;
-
-	private void Awake()
-	{
-		pm = GetComponent<PlayerMovement>();
-	}
-
 	private void Update()
 	{
 		if (Input.GetButtonDown("Fire1") && fireCooldownLeft <= 0f) {
@@ -33,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
 
 	public void Die(bool force = false)
 	{
-		if (!force && pm.IsDashing) {
+		if (!force && PlayerMovement.IsDashing) {
 			return;
 		}
 

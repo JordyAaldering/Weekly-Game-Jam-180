@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private GameObject shieldSprite;
 	[SerializeField] private Color shipDashColor;
 
-	public bool IsDashing { get; private set; }
+	public static bool IsDashing { get; private set; }
 
 	private Vector2 moveDir;
     private Rigidbody2D rb;

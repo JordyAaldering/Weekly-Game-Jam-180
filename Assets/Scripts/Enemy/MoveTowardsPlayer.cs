@@ -3,17 +3,21 @@
 public class MoveTowardsPlayer : StateMachineBehaviour
 {
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float stoppingDistance;
+    [SerializeField] private float stoppingDistanceMin;
+    [SerializeField] private float stoppingDistanceMax;
 
     [Header("State Transition")]
     [SerializeField] private float minStateTime;
     [SerializeField] private float maxStateTime;
+
+    private float stoppingDistance;
     private float stateTimeLeft;
 
     private Transform player;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        stoppingDistance = Random.Range(stoppingDistanceMin, stoppingDistanceMax);
         stateTimeLeft = Random.Range(minStateTime, maxStateTime);
 
         player = GameObject.FindWithTag("Player").transform;
@@ -31,7 +35,11 @@ public class MoveTowardsPlayer : StateMachineBehaviour
 
         stateTimeLeft -= Time.deltaTime;
         if (stateTimeLeft <= 0f) {
-            animator.Play("RotateAroundPlayer");
+            if (Random.Range(0f, 1f) > 0.2f) {
+                animator.Play("RotateAroundPlayer");
+            } else {
+                animator.Play("Idle");
+            }
         }
     }
 

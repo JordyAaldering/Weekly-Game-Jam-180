@@ -37,4 +37,15 @@ public class EnemyCombat : MonoBehaviour
 
 		Destroy(gameObject);
 	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Player")) {
+			if (PlayerMovement.IsDashing) {
+				Die();
+			} else {
+				player.GetComponent<PlayerCombat>().Die();
+			}
+		}
+	}
 }
