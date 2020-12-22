@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
 	// Upgrades
 	public static bool CanDash { get; set; } = true;
+	public static bool AlwaysDash { get; set; } = false;
 	public static bool InvertControls { get; set; } = false;
 	public static float MoveSpeedModifier { get; set; } = 1f;
 
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 		// clamp diagonal movement speed
 		moveDir = Vector2.ClampMagnitude(moveDir, 1f);
 
-		if (CanDash && !IsDashing && Input.GetButtonDown("Dash")) {
+		if (CanDash && !IsDashing && (Input.GetButtonDown("Dash") || AlwaysDash)) {
 			StartCoroutine(Dash(moveDir));
 		}
 	}

@@ -20,6 +20,7 @@ public class PlayerCombat : MonoBehaviour
 
 			Laser laser = Instantiate(laserPrefab, transform.position, transform.rotation);
 			laser.Parent = gameObject;
+			laser.ParentIsPlayer = true;
 		}
 
 		if (fireCooldownLeft > 0f) {

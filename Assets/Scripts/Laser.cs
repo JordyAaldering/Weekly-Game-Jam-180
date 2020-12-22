@@ -2,14 +2,19 @@
 
 public class Laser : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float lifeTime;
+	[SerializeField] private float moveSpeed;
+	[SerializeField] private float lifeTime;
+
+	public static float PlayerSpeedModifier { get; set; } = 1f;
+	public static float EnemySpeedModifier { get; set; } = 1f;
 
 	public GameObject Parent { get; set; }
+	public bool ParentIsPlayer { get; set; }
 
 	private void Update()
 	{
-		transform.position += moveSpeed * Time.deltaTime * transform.right;
+		float speed = moveSpeed * (ParentIsPlayer ? PlayerSpeedModifier : EnemySpeedModifier);
+		transform.position += speed * Time.deltaTime * transform.right;
 
 		lifeTime -= Time.deltaTime;
 		if (lifeTime < 0f) {

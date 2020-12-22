@@ -3,8 +3,8 @@
 [CreateAssetMenu(fileName = "Move Slower", menuName = "Upgrade/Move Slower")]
 public class UpgradeMoveSlower : UpgradeBase
 {
-	[SerializeField] private float scoreIncrease;
 	[SerializeField] private float moveSpeedModifier;
+	[SerializeField] private float scoreIncrease;
 
 	public override void ApplyUpgrade()
 	{
