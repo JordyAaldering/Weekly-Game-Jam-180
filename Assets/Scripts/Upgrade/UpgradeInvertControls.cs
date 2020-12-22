@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName="No Dash", menuName="Upgrade/No Dash")]
-public class UpgradeNoDash : UpgradeBase
+[CreateAssetMenu(fileName = "Invert Controls", menuName = "Upgrade/Invert Controls")]
+public class UpgradeInvertControls: UpgradeBase
 {
 	[SerializeField] private float scorePerSecImprovement;
 
 	public override void ApplyUpgrade()
 	{
-		PlayerMovement.CanDash = false;
+		PlayerMovement.InvertControls = true;
 		ScoreManager.Instance.ScorePerSecond += scorePerSecImprovement;
 	}
 }

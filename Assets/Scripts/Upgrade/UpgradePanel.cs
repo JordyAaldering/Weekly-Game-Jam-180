@@ -6,10 +6,12 @@ public class UpgradePanel : MonoBehaviour
 {
     [SerializeField] private Image icon;
     [SerializeField] private TextMeshProUGUI description;
-    [SerializeField] private UpgradeBase upgrade;
+    
+	private UpgradeBase upgrade;
 
-	private void Awake()
+	public void SetUpgrade(UpgradeBase upgrade)
 	{
+		this.upgrade = upgrade;
 		icon.sprite = upgrade.Icon;
 		description.text = upgrade.Description;
 	}

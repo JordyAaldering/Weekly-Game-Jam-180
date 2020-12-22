@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName="No Dash", menuName="Upgrade/No Dash")]
-public class UpgradeNoDash : UpgradeBase
+[CreateAssetMenu(fileName = "No Shoot", menuName = "Upgrade/No Shoot")]
+public class UpgradeNoShoot : UpgradeBase
 {
 	[SerializeField] private float scorePerSecImprovement;
 
 	public override void ApplyUpgrade()
 	{
-		PlayerMovement.CanDash = false;
+		PlayerCombat.CanShoot = false;
 		ScoreManager.Instance.ScorePerSecond += scorePerSecImprovement;
 	}
 }

@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f54d48e56d4d3429cf0ba4de94333f, type: 3}
-  m_Name: No Dash
+  m_Script: {fileID: 11500000, guid: c264db25043997e458b202763a2977bf, type: 3}
+  m_Name: No Shoot
   m_EditorClassIdentifier: 
   icon: {fileID: 3646490248035491683, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
-  description: 'You can no longer Dash.
-
-
-    Gain way more score per second.'
-  scorePerSecImprovement: 10
+  description: You can no longer shoot
+  scorePerSecImprovement: 5

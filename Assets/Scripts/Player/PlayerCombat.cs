@@ -8,11 +8,14 @@ public class PlayerCombat : MonoBehaviour
 
 	public static bool IsDead { get; private set; }
 
+	// Upgrades
+	public static bool CanShoot { get; set; } = true;
+
 	private float fireCooldownLeft;
 
 	private void Update()
 	{
-		if (Input.GetButtonDown("Fire1") && fireCooldownLeft <= 0f) {
+		if (CanShoot && Input.GetButtonDown("Fire1") && fireCooldownLeft <= 0f) {
 			fireCooldownLeft = fireCooldown;
 
 			Laser laser = Instantiate(laserPrefab, transform.position, transform.rotation);

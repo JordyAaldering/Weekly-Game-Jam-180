@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6ebe9c75e2dc54b8e8000742f38fb4, type: 3}
+  m_Name: Move Much Slower
+  m_EditorClassIdentifier: 
+  icon: {fileID: 3646490248035491683, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  description: 'Move much slower.
+
+
+    Instantly gain 250 score.'
+  scoreIncrease: 250
+  moveSpeedModifier: 0.8

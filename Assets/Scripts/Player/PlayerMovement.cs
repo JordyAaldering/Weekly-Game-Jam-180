@@ -13,8 +13,12 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] private GameObject shieldSprite;
 	[SerializeField] private Color shipDashColor;
 
-	public static bool CanDash { get; set; } = true;
 	public static bool IsDashing { get; private set; }
+
+	// Upgrades
+	public static bool CanDash { get; set; } = true;
+	public static bool InvertControls { get; set; } = false;
+	public static float MoveSpeedModifier { get; set; } = 1f;
 
 	private Vector2 moveDir;
     private Rigidbody2D rb;
@@ -44,7 +48,10 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate()
 	{
 		if (!IsDashing) {
-			rb.velocity = moveSpeed * moveDir;
+			rb.velocity = moveSpeed * MoveSpeedModifier * moveDir;
+			if (InvertControls) {
+				rb.velocity = -rb.velocity;
+			}
 		}
 	}
 
@@ -58,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
 
 		for (float t = 0; t < dashTime; t += Time.deltaTime) {
 			rb.velocity = dashSpeed * dashDir;
+			if (InvertControls) {
+				rb.velocity = -rb.velocity;
+			}
+
 			yield return null;
 		}
 
