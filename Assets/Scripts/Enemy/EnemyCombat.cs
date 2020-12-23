@@ -8,6 +8,8 @@ public class EnemyCombat : MonoBehaviour
 	[SerializeField] private Laser laserPrefab;
 	[SerializeField] private int pointsReward;
 
+	[SerializeField] private GameObject dieExplosion;
+
 	private Transform player;
 
 	private void Awake()
@@ -38,6 +40,9 @@ public class EnemyCombat : MonoBehaviour
 	public void Die()
 	{
 		ScoreManager.Instance.Score += pointsReward;
+
+		Quaternion rot = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+		Instantiate(dieExplosion, transform.position, rot);
 
 		Destroy(gameObject);
 	}

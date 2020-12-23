@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8860537941280877114}
   - component: {fileID: 6016259758581611024}
   m_Layer: 0
-  m_Name: Laser
+  m_Name: Laser Enemy
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,3 +155,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   lifeTime: 5
+  dieExplosion: {fileID: 3644206832092391050, guid: c990a8270c29e2c4a8457c2e6108ca32,
+    type: 3}

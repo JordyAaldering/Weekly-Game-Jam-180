@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 91365337}
   - component: {fileID: 91365339}
   - component: {fileID: 91365338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -2058,7 +2058,7 @@ GameObject:
   - component: {fileID: 1346084697}
   - component: {fileID: 1346084699}
   - component: {fileID: 1346084698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 1347852918}
   - component: {fileID: 1347852920}
   - component: {fileID: 1347852919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -2228,7 +2228,7 @@ GameObject:
   - component: {fileID: 1371048573}
   - component: {fileID: 1371048575}
   - component: {fileID: 1371048574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Meteor
   m_Icon: {fileID: 0}
@@ -2579,6 +2579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireCooldown: 1
   laserPrefab: {fileID: 6016259758581611024, guid: 5722cca14d75e534a971f45eea9a9d8b,
+    type: 3}
+  dieExplosion: {fileID: 3566439895131147526, guid: 81c5b70b025c9d24b9b534fc76e1e859,
     type: 3}
 --- !u!224 &1709765839 stripped
 RectTransform:

@@ -5,6 +5,8 @@ public class Laser : MonoBehaviour
 	[SerializeField] private float moveSpeed;
 	[SerializeField] private float lifeTime;
 
+	[SerializeField] private GameObject dieExplosion;
+
 	public static float PlayerSpeedModifier { get; set; } = 1f;
 	public static float EnemySpeedModifier { get; set; } = 1f;
 
@@ -30,6 +32,9 @@ public class Laser : MonoBehaviour
 			} else if (collision.TryGetComponent<EnemyCombat>(out var eCombat)) {
 				eCombat.Die();
 			}
+
+			Quaternion rot = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+			Instantiate(dieExplosion, transform.position, rot);
 
 			// destroy the laser on any collision
 			Destroy(gameObject);

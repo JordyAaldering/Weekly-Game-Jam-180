@@ -9,6 +9,7 @@ public class EnemySpawning : MonoBehaviour
 	[SerializeField] private EnemyCombat enemyPrefab;
 
 	private float spawnTimeLeft = 1f;
+	private int count = 0;
 
 	private void Update()
 	{
@@ -22,10 +23,13 @@ public class EnemySpawning : MonoBehaviour
 			spawnTimeLeft = Random.Range(spawnTimeMin, spawnTimeMax);
 
 			float x = Random.Range(0f, 2f * spawnDistance);
-			float y = Mathf.Sin(spawnDistance * 10f / Mathf.PI * x);
+			float y = Mathf.Sin(Mathf.PI / spawnDistance * x);
 			Vector3 pos = new Vector3(x - spawnDistance, y * spawnDistance);
 
-			Instantiate(enemyPrefab, pos, Quaternion.identity, transform);
+			var enemy = Instantiate(enemyPrefab, pos, Quaternion.identity, transform);
+
+			string name = enemy.name = $"Enemy ({++count})";
+			Debug.Log($"{name} spawned at ({pos.x}, {pos.y})");
 		}
 	}
 }

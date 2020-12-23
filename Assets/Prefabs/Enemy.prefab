@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3932590590510419180}
   - component: {fileID: 2690571939875316935}
   - component: {fileID: 7349932130807102470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -123,6 +123,8 @@ MonoBehaviour:
   laserPrefab: {fileID: 6016259758581611024, guid: c41d9cc00e820054fafddf678208322c,
     type: 3}
   pointsReward: 100
+  dieExplosion: {fileID: 5657807818760966922, guid: 5c608c04a09cfd24da4f0094b4d8b1b3,
+    type: 3}
 --- !u!114 &7349932130807102470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3932590590745043492}
   - component: {fileID: 3932590590745043493}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

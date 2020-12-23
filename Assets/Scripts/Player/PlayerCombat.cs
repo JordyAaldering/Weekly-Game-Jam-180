@@ -6,6 +6,8 @@ public class PlayerCombat : MonoBehaviour
 	[SerializeField] private float fireCooldown;
 	[SerializeField] private Laser laserPrefab;
 
+	[SerializeField] private GameObject dieExplosion;
+
 	public static bool IsDead { get; private set; }
 
 	// Upgrades
@@ -35,6 +37,8 @@ public class PlayerCombat : MonoBehaviour
 		}
 
 		IsDead = true;
+
+		Instantiate(dieExplosion, transform.position, transform.rotation);
 
 		FindObjectOfType<GameOverCanvas>().EnablePanel();
 		Destroy(gameObject);
