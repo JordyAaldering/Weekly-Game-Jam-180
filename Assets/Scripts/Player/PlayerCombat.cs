@@ -15,6 +15,12 @@ public class PlayerCombat : MonoBehaviour
 
 	private float fireCooldownLeft;
 
+	private void Awake()
+	{
+		IsDead = false;
+		CanShoot = true;
+	}
+
 	private void Update()
 	{
 		if (CanShoot && Input.GetButtonDown("Fire1") && fireCooldownLeft <= 0f) {

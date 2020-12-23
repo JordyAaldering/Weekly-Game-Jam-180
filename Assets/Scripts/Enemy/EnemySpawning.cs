@@ -23,7 +23,7 @@ public class EnemySpawning : MonoBehaviour
 			spawnTimeLeft = Random.Range(spawnTimeMin, spawnTimeMax);
 
 			float x = Random.Range(0f, 2f * spawnDistance);
-			float y = Mathf.Sin(Mathf.PI / spawnDistance * x);
+			float y = Mathf.Cos(Mathf.PI / spawnDistance * x);
 			Vector3 pos = new Vector3(x - spawnDistance, y * spawnDistance);
 
 			var enemy = Instantiate(enemyPrefab, pos, Quaternion.identity, transform);

@@ -16,6 +16,10 @@ public class UpgradeManager : MonoBehaviour
 
 	private void Awake()
 	{
+		// Set default laser upgrade values
+		Laser.PlayerSpeedModifier = 1f;
+		Laser.EnemySpeedModifier = 1f;
+
 		upgradeGroup.SetActive(false);
 	}
 

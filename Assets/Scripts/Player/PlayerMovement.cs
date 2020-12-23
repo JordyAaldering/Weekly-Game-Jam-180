@@ -28,6 +28,13 @@ public class PlayerMovement : MonoBehaviour
 	{
 		shieldSprite.SetActive(false);
 
+		IsDashing = false;
+
+		CanDash = true;
+		AlwaysDash = false;
+		InvertControls = false;
+		MoveSpeedModifier = 1f;
+
 		rb = GetComponent<Rigidbody2D>();
 	}
 
