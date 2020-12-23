@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8074bb9aa31df9f48b0b114c851b4e93, type: 3}
   m_Name: Invert Controls
   m_EditorClassIdentifier: 
-  icon: {fileID: -1638408184179387560, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  icon: {fileID: 21300000, guid: 3c7c381341ee9164698740cc411fb23f, type: 3}
   description: Invert movement controls.
   scorePerSecImprovement: 5

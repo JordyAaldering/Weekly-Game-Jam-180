@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dd9629b4ddd6746a36c5cc10cc4eab, type: 3}
   m_Name: Faster Enemy Laser Speed
   m_EditorClassIdentifier: 
-  icon: {fileID: -7873178565918532231, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  icon: {fileID: 21300000, guid: 84ec2cb2a7de01c44866abf323edd4c6, type: 3}
   description: Enemy lasers move faster.
   isPlayerSpeed: 0
   laserSpeedModifier: 1.1

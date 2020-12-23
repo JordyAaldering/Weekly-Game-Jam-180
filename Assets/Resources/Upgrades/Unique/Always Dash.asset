@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bed8e16ff5ae1b4694ce6aec7e47bff, type: 3}
   m_Name: Always Dash
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 5ed88e76d8486ca4b817ca8232cf0aab, type: 3}
   description: You can't stop dashing.
   scorePerSecImprovement: 5

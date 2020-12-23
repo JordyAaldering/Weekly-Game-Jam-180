@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f54d48e56d4d3429cf0ba4de94333f, type: 3}
   m_Name: No Dash
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 5ed88e76d8486ca4b817ca8232cf0aab, type: 3}
   description: You can no longer dash.
   scorePerSecImprovement: 5

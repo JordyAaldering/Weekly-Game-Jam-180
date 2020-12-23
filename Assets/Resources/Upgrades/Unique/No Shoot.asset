@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c264db25043997e458b202763a2977bf, type: 3}
   m_Name: No Shoot
   m_EditorClassIdentifier: 
-  icon: {fileID: 3646490248035491683, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  icon: {fileID: 21300000, guid: c0f3acdb6121e1f42b6542aaff05f17a, type: 3}
   description: You can no longer shoot
   scorePerSecImprovement: 5

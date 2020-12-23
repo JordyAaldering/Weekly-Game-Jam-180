@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6ebe9c75e2dc54b8e8000742f38fb4, type: 3}
   m_Name: Move Much Slower
   m_EditorClassIdentifier: 
-  icon: {fileID: 3646490248035491683, guid: b707ca0ae50f9e843a191bca53adeb01, type: 3}
+  icon: {fileID: 21300000, guid: 879b633f380214c4783417d52d0ff4b5, type: 3}
   description: 'Move much slower.
 
 
     Instantly gain 250 score.'
-  scoreIncrease: 250
   moveSpeedModifier: 0.8
+  scoreIncrease: 250
