@@ -46,6 +46,7 @@ public class PlayerCombat : MonoBehaviour
 
 		Instantiate(dieExplosion, transform.position, transform.rotation);
 
+		FindObjectOfType<UpgradeManager>().CloseUpgradePanel();
 		FindObjectOfType<GameOverCanvas>().EnablePanel();
 		Destroy(gameObject);
 	}
