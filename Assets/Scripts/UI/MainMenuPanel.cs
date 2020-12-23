@@ -18,11 +18,11 @@ public class MainMenuPanel : MonoBehaviour
 	public void SetMusicVolume(float volume)
 	{
 		musicSoure.volume = volume;
-		PlayerPrefs.SetFloat("MusicVolume", volume);
+		PlayerPrefs.SetFloat("musicVolume", volume);
 	}
 
 	public void SetSfxVolume(float volume)
 	{
-		PlayerPrefs.SetFloat("SfxVolume", volume);
+		PlayerPrefs.SetFloat("sfxVolume", volume);
 	}
 }
