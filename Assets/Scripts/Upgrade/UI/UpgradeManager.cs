@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+	[SerializeField] private float initialUpgradeTimer;
 	[SerializeField] private float upgradeInterval;
 	[SerializeField] private List<UpgradeBase> uniqueUpgrades;
     [SerializeField] private List<UpgradeBase> repeatableUpgrades;
@@ -12,7 +13,8 @@ public class UpgradeManager : MonoBehaviour
 	[SerializeField] private GameObject upgradeGroup;
     [SerializeField] private UpgradePanel[] upgradePanels;
 
-	private float timeUntilUpgrade = 5f;
+	public static float TimeUntilUpgrade { get; private set; }
+	public static bool AcceptClicks { get; private set; }
 
 	private void Awake()
 	{
@@ -20,19 +22,36 @@ public class UpgradeManager : MonoBehaviour
 		Laser.PlayerSpeedModifier = 1f;
 		Laser.EnemySpeedModifier = 1f;
 
+		TimeUntilUpgrade = initialUpgradeTimer;
+		AcceptClicks = false;
+
 		upgradeGroup.SetActive(false);
 	}
 
 	private void Update()
 	{
-		timeUntilUpgrade -= Time.deltaTime;
+		TimeUntilUpgrade -= Time.deltaTime;
 
-		if (timeUntilUpgrade <= 0f) {
-			timeUntilUpgrade = upgradeInterval;
-			upgradeGroup.SetActive(true);
-			SetUpgrades();
-			Time.timeScale = 0.05f;
+		if (TimeUntilUpgrade <= 0f) {
+			OpenUpgradePanel();
+			StartCoroutine(EnableClickingAfter(0.05f));
 		}
+	}
+
+	private void OpenUpgradePanel()
+	{
+		Time.timeScale = 0.05f;
+		TimeUntilUpgrade = upgradeInterval;
+		upgradeGroup.SetActive(true);
+
+		SetUpgrades();
+	}
+
+	private System.Collections.IEnumerator EnableClickingAfter(float time)
+	{
+		AcceptClicks = false;
+		yield return new WaitForSeconds(time);
+		AcceptClicks = true;
 	}
 
 	public void CloseUpgradePanel()
