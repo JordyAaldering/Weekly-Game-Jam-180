@@ -14,6 +14,7 @@ public class GameOverCanvas : MonoBehaviour
 	{
 		gameOverPanel.SetActive(true);
 		ScoreManager.DisablePanel();
+		UpgradeTimerPanel.DisablePanel();
 	}
 
 	public void LoadScene(int scene)

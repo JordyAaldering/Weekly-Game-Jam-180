@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 	public static float MoveSpeedModifier { get; set; } = 1f;
 
 	private Vector2 moveDir;
+	private Vector2 dashDir = Vector2.up;
     private Rigidbody2D rb;
 
 	private void Awake()
@@ -45,11 +46,15 @@ public class PlayerMovement : MonoBehaviour
 			Input.GetAxis("Vertical")
 		);
 
+		if (moveDir.magnitude > 0.5f) {
+			dashDir = moveDir;
+		}
+
 		// clamp diagonal movement speed
 		moveDir = Vector2.ClampMagnitude(moveDir, 1f);
 
 		if (CanDash && !IsDashing && (Input.GetButtonDown("Dash") || AlwaysDash)) {
-			StartCoroutine(Dash(moveDir));
+			StartCoroutine(Dash(dashDir));
 		}
 	}
 

@@ -30,6 +30,10 @@ public class UpgradeManager : MonoBehaviour
 
 	private void Update()
 	{
+		if (PlayerCombat.IsDead) {
+			return;
+		}
+
 		TimeUntilUpgrade -= Time.deltaTime;
 
 		if (TimeUntilUpgrade <= 0f) {
