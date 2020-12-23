@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8860537941280877114}
   - component: {fileID: 6016259758581611024}
   - component: {fileID: -580456503269763368}
+  - component: {fileID: -4545700348615132339}
   m_Layer: 0
   m_Name: Laser Player
   m_TagString: Projectile
@@ -254,3 +255,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-4545700348615132339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016259758581611026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e896c19bb9e925469a0fb8b181eb7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolume: 0.8
+  playerPrefName: sfxVolume

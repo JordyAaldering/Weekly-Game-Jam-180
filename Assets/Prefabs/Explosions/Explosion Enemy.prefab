@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 943086608018055790}
   - component: {fileID: 5174618673590120724}
   - component: {fileID: 866347371354591296}
+  - component: {fileID: 4642978281426024121}
   m_Layer: 0
   m_Name: Explosion Enemy
   m_TagString: Untagged
@@ -199,3 +200,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4642978281426024121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657807818760966922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e896c19bb9e925469a0fb8b181eb7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolume: 0.8
+  playerPrefName: sfxVolume
