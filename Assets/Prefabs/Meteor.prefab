@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedMin: 0.1
   moveSpeedMax: 0.2
-  randomOffset: 0.7
+  randomOffset: 0.8
   routes:
   - {fileID: 0}
   - {fileID: 0}

@@ -27,7 +27,7 @@ public class UpgradeManager : MonoBehaviour
 			timeUntilUpgrade = upgradeInterval;
 			upgradeGroup.SetActive(true);
 			SetUpgrades();
-			Time.timeScale = 0f;
+			Time.timeScale = 0.05f;
 		}
 	}
 
