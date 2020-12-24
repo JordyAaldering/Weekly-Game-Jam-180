@@ -44,6 +44,10 @@ public class PlayerCombat : MonoBehaviour
 
 		IsDead = true;
 
+		int curHigh = PlayerPrefs.GetInt("highScore", 0);
+		int high = Mathf.Max(curHigh, (int)ScoreManager.Instance.Score);
+		PlayerPrefs.SetInt("highScore", high);
+
 		Instantiate(dieExplosion, transform.position, transform.rotation);
 
 		FindObjectOfType<UpgradeManager>().CloseUpgradePanel();

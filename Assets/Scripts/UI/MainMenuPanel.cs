@@ -1,11 +1,18 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuPanel : MonoBehaviour
 {
+	[SerializeField] private TextMeshProUGUI highScore;
 	[SerializeField] private AudioSource musicSoure;
 
-    public void StartLevel()
+	private void Awake()
+	{
+		highScore.text = $"High Score: {PlayerPrefs.GetInt("highScore", 0)}";
+	}
+
+	public void StartLevel()
 	{
 		SceneManager.LoadScene(1);
 	}

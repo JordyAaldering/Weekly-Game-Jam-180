@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Faster Enemy Spawning
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: e6e6f557fada2034985c8ac022abe77f, type: 3}
-  description: Enemies spawn faster.
+  description: 'Enemies spawn faster.
+
+
+    Gain 1000 score.'
   spawnTimeModifier: 0.9
   scoreIncrease: 1000

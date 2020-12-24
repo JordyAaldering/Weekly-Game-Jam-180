@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Slower Player Laser Speed
   m_EditorClassIdentifier: 
   icon: {fileID: 21300000, guid: 84ec2cb2a7de01c44866abf323edd4c6, type: 3}
-  description: Your lasers move slower.
+  description: 'Your lasers move slower.
+
+
+    Gain 150 score.'
   isPlayerSpeed: 1
-  laserSpeedModifier: 0.9
-  scoreIncrease: 100
+  laserSpeedModifier: 0.85
+  scoreIncrease: 150

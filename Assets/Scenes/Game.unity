@@ -679,8 +679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDistance: 14
-  spawnTimeMin: 5
-  spawnTimeMax: 10
+  spawnTimeMin: 4
+  spawnTimeMax: 7
   enemyPrefab: {fileID: 2690571939875316935, guid: 847c8a187bb28ad40afd984252243cb7,
     type: 3}
 --- !u!1 &288904258
@@ -2200,7 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialUpgradeTimer: 7
-  upgradeInterval: 30
+  upgradeInterval: 20
   uniqueUpgrades:
   - {fileID: 11400000, guid: 67bc3be021768214cb940f9b4be8dea9, type: 2}
   - {fileID: 11400000, guid: dcd0a0eb50911744989c521ef93d4cf4, type: 2}
@@ -3458,6 +3458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4008c80086fa4784bb555c178c3f71a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerPanel: {fileID: 0}
   timeUntilUpgrade: {fileID: 960037572}
 --- !u!1 &2118303247
 GameObject:
