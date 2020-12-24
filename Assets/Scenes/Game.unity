@@ -3458,7 +3458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4008c80086fa4784bb555c178c3f71a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerPanel: {fileID: 0}
+  timerPanel: {fileID: 1954190660}
   timeUntilUpgrade: {fileID: 960037572}
 --- !u!1 &2118303247
 GameObject:
